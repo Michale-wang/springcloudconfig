@@ -1,0 +1,29 @@
+
+spring:
+  datasource:
+    # 可省略
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud
+    username: root
+    password: 123456
+  # 应用名称
+  application:
+    name: user-service
+server:
+  # 端口 ${port:如果引入参数port不存在，则使用默认端口8082}
+  port: ${port:8082}
+eureka:
+  client:
+    service-url:
+      # 注册中心地址
+      defaultZone: http://localhost:8084/eureka
+    # 每隔多久获取服务中心列表，(只读备份)，默认30秒
+    registry-fetch-interval-seconds: 30
+  # 租约续约间隔时间，默认30秒
+
+  instance:
+    lease-renewal-interval-in-seconds: 30
+# 租约到期，服务时效时间，默认值90秒
+    lease-expiration-duration-in-seconds: 90
+
+
