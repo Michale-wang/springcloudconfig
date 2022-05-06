@@ -26,4 +26,8 @@ eureka:
 # 租约到期，服务时效时间，默认值90秒
     lease-expiration-duration-in-seconds: 90
 
+# 测试
+test:
+  hello: world
+
 
