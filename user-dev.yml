@@ -36,6 +36,6 @@ eureka:
 
 # 测试
 test:
-  hello: world
+  hello: world1
 
 
